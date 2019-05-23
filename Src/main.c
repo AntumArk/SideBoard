@@ -54,7 +54,29 @@ typedef struct
   uint8_t E2;
   //uint32_t crc;
 } Serialcommand;
-
+typedef struct{
+	  uint8_t H1;
+  uint8_t H2;
+ adc_buf_t adcBuf;
+  uint8_t crc1;
+  uint8_t crc2;
+  uint8_t E1;
+  uint8_t E2;
+}SerialOutCommand;
+/*
+typedef struct {
+  uint16_t rr1;
+  uint16_t rr2;
+  uint16_t rl1;
+  uint16_t rl2;
+  uint16_t dcr; //Current right
+  uint16_t dcl; // Current left
+  uint16_t batt1;
+  uint16_t l_tx2;
+  uint16_t temp;
+  uint16_t l_rx2;
+} adc_buf_t;
+*/
 uint16_t MAX_SPEED = 600;
 static volatile uint8_t H1 = 0xF1; //Header 1
 static volatile uint8_t H2 = 0xF2; //Header 2
@@ -86,9 +108,7 @@ extern float batteryVoltage;      // global variable for battery voltage
 uint32_t inactivity_timeout_counter;
 
 extern uint8_t nunchuck_data[6];
-#ifdef CONTROL_PPM
-extern volatile uint16_t ppm_captured_value[PPM_NUM_CHANNELS + 1];
-#endif
+
 
 int milli_vel_error_sum = 0;
 
@@ -333,6 +353,7 @@ int main(void)
   UART_Control_Init();
   //HAL_UART_Receive_DMA(&huart2, (uint8_t *)&command, sizeof(command));
 	HAL_UART_Receive_DMA(&huart2, (uint8_t *)&RxBuff, sizeof(RxBuff));
+	HAL_UART_Transmit_DMA(&huart2,);
 #endif
 
 
@@ -391,11 +412,14 @@ if (!HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN))
     // ####### LOW-PASS FILTER #######
     steer = steer * (1.0 - FILTER) + ((command.steer-40)*(MAX_SPEED/40) )* FILTER;
     speed = speed * (1.0 - FILTER) + ((command.speed-40)*(MAX_SPEED/40) ) * FILTER;
-speed=150;
-steer=0;
+//speed=150;
+//steer=0;
+
     // ####### MIXER #######
-    speedR = CLAMP(speed * SPEED_COEFFICIENT - steer * STEER_COEFFICIENT, -MAX_SPEED, MAX_SPEED);
-    speedL = CLAMP(speed * SPEED_COEFFICIENT + steer * STEER_COEFFICIENT, -MAX_SPEED, MAX_SPEED);
+   // speedR = CLAMP(speed * SPEED_COEFFICIENT - steer * STEER_COEFFICIENT, -MAX_SPEED, MAX_SPEED);
+   // speedL = CLAMP(speed * SPEED_COEFFICIENT + steer * STEER_COEFFICIENT, -MAX_SPEED, MAX_SPEED);
+		speedR = CLAMP(speed , -MAX_SPEED, MAX_SPEED);
+    speedL = CLAMP(speed , -MAX_SPEED, MAX_SPEED);
 //if(command.Mode=='A')
 	//	{speedR=0;
 	//		speedL=0;}
@@ -433,13 +457,13 @@ steer=0;
       setScopeChannel(0, (int)adc_buffer.l_tx2); // 1: ADC1
       setScopeChannel(1, (int)adc_buffer.l_rx2); // 2: ADC2
 #endif
-      setScopeChannel(2, (int)speedR);                    // 3: output speed: 0-1000
-      setScopeChannel(3, (int)speedL);                    // 4: output speed: 0-1000
-      setScopeChannel(4, (int)adc_buffer.batt1);          // 5: for battery voltage calibration
-      setScopeChannel(5, (int)(batteryVoltage * 100.0f)); // 6: for verifying battery voltage calibration
-      setScopeChannel(6, (int)board_temp_adc_filtered);   // 7: for board temperature calibration
-      setScopeChannel(7, (int)board_temp_deg_c);          // 8: for verifying board temperature calibration
-      consoleScope();
+     // setScopeChannel(2, (int)speedR);                    // 3: output speed: 0-1000
+     // setScopeChannel(3, (int)speedL);                    // 4: output speed: 0-1000
+     // setScopeChannel(4, (int)adc_buffer.batt1);          // 5: for battery voltage calibration
+     // setScopeChannel(5, (int)(batteryVoltage * 100.0f)); // 6: for verifying battery voltage calibration
+     // setScopeChannel(6, (int)board_temp_adc_filtered);   // 7: for board temperature calibration
+     // setScopeChannel(7, (int)board_temp_deg_c);          // 8: for verifying board temperature calibration
+     // consoleScope();
     }
 		
     // ####### BEEP AND EMERGENCY POWEROFF #######

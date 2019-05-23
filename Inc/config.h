@@ -45,8 +45,8 @@
 
 // ############################### SERIAL DEBUG ###############################
 
-#define DEBUG_SERIAL_USART3 // right sensor board cable, disable if I2C (nunchuck or lcd) is used!
-#define DEBUG_BAUD 115200   // UART baud rate
+#define DEBUG_SERIAL_USART2 // right sensor board cable, disable if I2C (nunchuck or lcd) is used!
+//#define DEBUG_BAUD 115200   // UART baud rate
 //#define DEBUG_SERIAL_SERVOTERM
 #define DEBUG_SERIAL_ASCII // "1:345 2:1337 3:0 4:0 5:0 6:0 7:0 8:0\r\n"
 
@@ -84,12 +84,12 @@
 // - speedR and speedL: normal driving -1000 to 1000
 // - weakr and weakl: field weakening for extra boost at high speed (speedR > 700 and speedL > 700). 0 to ~400
 
-#define FILTER 0.1            // lower value == softer filter. do not use values <0.01, you will get float precision issues.
+#define FILTER 0.01            // lower value == softer filter. do not use values <0.01, you will get float precision issues.
 #define SPEED_COEFFICIENT 0.5 // higher value == stronger. 0.0 to ~2.0?
 #define STEER_COEFFICIENT 0.5 // higher value == stronger. if you do not want any steering, set it to 0.0; 0.0 to 1.0
 //#define INVERT_R_DIRECTION
 //#define INVERT_L_DIRECTION
-#define BEEPS_BACKWARD 1 // 0 or 1
+#define BEEPS_BACKWARD 0 // 0 or 1
 
 //Turbo boost at high speeds while button1 is pressed:
 //#define ADDITIONAL_CODE \
