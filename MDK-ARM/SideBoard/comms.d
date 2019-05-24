@@ -32,3 +32,5 @@ sideboard\comms.o: ../Inc/defines.h
 sideboard\comms.o: ../Inc/setup.h
 sideboard\comms.o: ../Inc/config.h
 sideboard\comms.o: A:\Programs\Keil\ARM\ARMCC\Bin\..\include\string.h
+sideboard\comms.o: ../Inc/comms.h
+sideboard\comms.o: ../Inc/softwareserial.h

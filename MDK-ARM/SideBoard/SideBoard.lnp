@@ -7,6 +7,13 @@
 "sideboard\setup.o"
 "sideboard\stm32f1xx_hal_msp.o"
 "sideboard\stm32f1xx_it.o"
+"sideboard\deadreckoner.o"
+"sideboard\flashaccess.o"
+"sideboard\flasharea.o"
+"sideboard\hallinterrupts.o"
+"sideboard\pid.o"
+"sideboard\sensorcoms.o"
+"sideboard\softwareserial.o"
 "sideboard\stm32f1xx_hal_gpio_ex.o"
 "sideboard\stm32f1xx_hal_tim.o"
 "sideboard\stm32f1xx_hal_tim_ex.o"
@@ -63,7 +70,7 @@
 "sideboard\stm32f1xx_ll_usart.o"
 "sideboard\stm32f1xx_ll_usb.o"
 "sideboard\stm32f1xx_ll_utils.o"
-"sideboard\system_stm32f1xx.o"
+"sideboard\system_stm32f1xx_1.o"
 --library_type=microlib --strict --scatter "SideBoard\SideBoard.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

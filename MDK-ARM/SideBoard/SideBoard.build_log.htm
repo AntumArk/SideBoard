@@ -22,39 +22,47 @@ Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
 A:\Electronics\MixWorkspace\SideBoard\MDK-ARM\SideBoard.uvprojx
-Project File Date:  03/21/2019
+Project File Date:  05/23/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'A:\Programs\Keil\ARM\ARMCC\Bin'
 Build target 'SideBoard'
-compiling main.c...
-..\Src\main.c(105): warning:  #188-D: enumerated type mixed with another type
-      HAL_GPIO_WritePin(OFF_PORT, OFF_PIN, 0);
-..\Src\main.c(107): warning:  #188-D: enumerated type mixed with another type
-      {  HAL_GPIO_WritePin(OFF_PORT, OFF_PIN, 0);
-..\Src\main.c(139): warning:  #223-D: function "memcpy" declared implicitly
-  	memcpy((void *)RxBuffTEMP, (void *)RxBuff, sizeof(RxBuffTEMP));
-..\Src\main.c(305): warning:  #188-D: enumerated type mixed with another type
-    HAL_GPIO_WritePin(OFF_PORT, OFF_PIN, 1);
-..\Src\main.c(317): warning:  #188-D: enumerated type mixed with another type
-    HAL_GPIO_WritePin(LED_PORT, LED_PIN, 1);
-..\Src\main.c(333): warning:  #223-D: function "UART_Control_Init" declared implicitly
-    UART_Control_Init();
-..\Src\main.c(436): warning:  #223-D: function "setScopeChannel" declared implicitly
-        setScopeChannel(2, (int)speedR);                    // 3: output speed: 0-1000
-..\Src\main.c(442): warning:  #223-D: function "consoleScope" declared implicitly
-        consoleScope();
-..\Src\main.c(319): warning:  #550-D: variable "lastSpeedL"  was set but never used
-    int lastSpeedL = 0, lastSpeedR = 0;
-..\Src\main.c(319): warning:  #550-D: variable "lastSpeedR"  was set but never used
-    int lastSpeedL = 0, lastSpeedR = 0;
-..\Src\main.c(321): warning:  #177-D: variable "direction"  was declared but never referenced
-    float direction = 1;
-..\Src\main.c: 11 warnings, 0 errors
+compiling setup.c...
+../Inc/comms.h(19): warning:  #1295-D: Deprecated declaration USART2_IT_starttx - give arg types
+  int   USART2_IT_starttx();
+../Inc/comms.h(43): warning:  #1295-D: Deprecated declaration consoleScope - give arg types
+  void consoleScope();
+../Inc/comms.h(49): warning:  #1-D: last line of file ends without a newline
+  #define CLAMP(x, low, high) (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
+..\Src\setup.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=17044 RO-data=376 RW-data=180 ZI-data=2004  
-FromELF: creating hex file...
-"SideBoard\SideBoard.axf" - 0 Error(s), 11 Warning(s).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol electrical_measurements multiply defined (by main.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol HallData multiply defined (by main.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol HallData multiply defined (by stm32f1xx_it.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol HallData multiply defined (by hallinterrupts.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol h_timer_hall multiply defined (by main.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol h_timer_hall multiply defined (by stm32f1xx_it.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol h_timer_hall multiply defined (by hallinterrupts.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol local_hall_params multiply defined (by main.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol local_hall_params multiply defined (by stm32f1xx_it.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol local_hall_params multiply defined (by hallinterrupts.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol timerwraps multiply defined (by main.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol timerwraps multiply defined (by stm32f1xx_it.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol timerwraps multiply defined (by hallinterrupts.o and bldc.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_TXbuffer multiply defined (by main.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_TXbuffer multiply defined (by setup.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_TXbuffer multiply defined (by flashaccess.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_TXbuffer multiply defined (by sensorcoms.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_RXbuffer multiply defined (by main.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_RXbuffer multiply defined (by setup.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_RXbuffer multiply defined (by flashaccess.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol usart2_it_RXbuffer multiply defined (by sensorcoms.o and comms.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol hdma_i2c2_rx multiply defined (by setup.o and control.o).
+SideBoard\SideBoard.axf: Error: L6200E: Symbol hdma_i2c2_tx multiply defined (by setup.o and control.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 23 error messages.
+"SideBoard\SideBoard.axf" - 23 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -77,6 +85,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
+Target not created.
 Build Time Elapsed:  00:00:03
 </pre>
 </body>

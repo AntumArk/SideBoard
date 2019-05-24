@@ -30,3 +30,5 @@ sideboard\setup.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 sideboard\setup.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 sideboard\setup.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 sideboard\setup.o: ../Inc/config.h
+sideboard\setup.o: ../Inc/comms.h
+sideboard\setup.o: A:\Programs\Keil\ARM\ARMCC\Bin\..\include\string.h

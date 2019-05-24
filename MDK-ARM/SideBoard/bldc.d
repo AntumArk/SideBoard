@@ -1,5 +1,4 @@
 sideboard\bldc.o: ..\Src\bldc.c
-sideboard\bldc.o: ../Inc/config.h
 sideboard\bldc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 sideboard\bldc.o: ../Inc/stm32f1xx_hal_conf.h
 sideboard\bldc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -31,3 +30,6 @@ sideboard\bldc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 sideboard\bldc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 sideboard\bldc.o: ../Inc/defines.h
 sideboard\bldc.o: ../Inc/setup.h
+sideboard\bldc.o: ../Inc/config.h
+sideboard\bldc.o: ../Inc/bldc.h
+sideboard\bldc.o: ../Inc/hallinterrupts.h

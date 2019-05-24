@@ -1,5 +1,6 @@
 sideboard\main.o: ..\Src\main.c
 sideboard\main.o: ../Inc/main.h
+sideboard\main.o: ../Inc/defines.h
 sideboard\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 sideboard\main.o: ../Inc/stm32f1xx_hal_conf.h
 sideboard\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -29,6 +30,18 @@ sideboard\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 sideboard\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 sideboard\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 sideboard\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-sideboard\main.o: ../Inc/config.h
-sideboard\main.o: ../Inc/defines.h
 sideboard\main.o: ../Inc/setup.h
+sideboard\main.o: ../Inc/config.h
+sideboard\main.o: ../Inc/comms.h
+sideboard\main.o: ../Inc/sensorcoms.h
+sideboard\main.o: ../Inc/flashaccess.h
+sideboard\main.o: ../Inc/protocol.h
+sideboard\main.o: ../Inc/bldc.h
+sideboard\main.o: ../Inc/hallinterrupts.h
+sideboard\main.o: ../Inc/softwareserial.h
+sideboard\main.o: ../Inc/pid.h
+sideboard\main.o: ../Inc/tick/tick.h
+sideboard\main.o: A:\Programs\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+sideboard\main.o: ../Inc/flashcontent.h
+sideboard\main.o: ../Inc/deadreckoner.h
+sideboard\main.o: A:\Programs\Keil\ARM\ARMCC\Bin\..\include\string.h

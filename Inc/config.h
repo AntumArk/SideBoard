@@ -11,7 +11,7 @@
 #define SOFTWARE_SERIAL_A2_A3 4
 
 // thoery says this is the only thing you need to change....
-#define CONTROL_TYPE HOVERBOARD_WITH_SOFTWARE_SERIAL_B2_C9
+#define CONTROL_TYPE USART2_CONTROLLED
 //////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////
@@ -174,7 +174,7 @@
 
 // ############################### ENABLE INTERRUPT READING OF HALL SENSORS FOR POSITION ###############################
 #define HALL_INTERRUPTS
-//#define WHEEL_SIZE_INCHES 8.5 - set to your wheelsize to override the default 6.5
+#define WHEEL_SIZE_INCHES 8.5// - set to your wheelsize to override the default 6.5
 
 
 // ############################### SOFTWARE SERIAL ###############################

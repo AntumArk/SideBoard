@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\Src\hbprotocol</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -426,6 +426,111 @@
               <FileName>stm32f1xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\stm32f1xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>deadreckoner.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\deadreckoner.c</FilePath>
+            </File>
+            <File>
+              <FileName>flashaccess.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\flashaccess.c</FilePath>
+            </File>
+            <File>
+              <FileName>flasharea.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\flasharea.c</FilePath>
+            </File>
+            <File>
+              <FileName>hallinterrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\hallinterrupts.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>sensorcoms.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\sensorcoms.c</FilePath>
+            </File>
+            <File>
+              <FileName>softwareserial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\softwareserial.c</FilePath>
+            </File>
+            <File>
+              <FileName>bldc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\bldc.h</FilePath>
+            </File>
+            <File>
+              <FileName>comms.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\comms.h</FilePath>
+            </File>
+            <File>
+              <FileName>config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\config.h</FilePath>
+            </File>
+            <File>
+              <FileName>deadreckoner.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\deadreckoner.h</FilePath>
+            </File>
+            <File>
+              <FileName>defines.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\defines.h</FilePath>
+            </File>
+            <File>
+              <FileName>flashaccess.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\flashaccess.h</FilePath>
+            </File>
+            <File>
+              <FileName>flashcontent.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\flashcontent.h</FilePath>
+            </File>
+            <File>
+              <FileName>hallinterrupts.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\hallinterrupts.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>pid.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\pid.h</FilePath>
+            </File>
+            <File>
+              <FileName>sensorcoms.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\sensorcoms.h</FilePath>
+            </File>
+            <File>
+              <FileName>setup.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\setup.h</FilePath>
+            </File>
+            <File>
+              <FileName>softwareserial.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\softwareserial.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\stm32f1xx_it.h</FilePath>
             </File>
           </Files>
         </Group>

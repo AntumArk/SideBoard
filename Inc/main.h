@@ -28,11 +28,11 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f1xx_hal.h"
+//#include "stm32f1xx_hal.h"
 //#include "stm32f1xx.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#define POLY 0x8408 /* 1021H bit reversed*/
+//#define POLY 0x8408 /* 1021H bit reversed*/
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -59,13 +59,13 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 /* USER CODE BEGIN Private defines */
-#define R_BuffSize 30
+/*#define R_BuffSize 30
 #define Rx_CommandCRCCount 6
 static volatile uint8_t RxBuff[R_BuffSize];
 static volatile uint8_t RxBuffTEMP[R_BuffSize];
 static volatile uint8_t RxCommandBuff[Rx_CommandCRCCount];
 static volatile uint32_t last_Rx_index = 0;
-static volatile uint8_t previous_command = 255;
+static volatile uint8_t previous_command = 255;*/
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

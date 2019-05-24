@@ -30,3 +30,6 @@ sideboard\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_
 sideboard\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 sideboard\stm32f1xx_it.o: ../Inc/stm32f1xx_it.h
 sideboard\stm32f1xx_it.o: ../Inc/config.h
+sideboard\stm32f1xx_it.o: ../Inc/hallinterrupts.h
+sideboard\stm32f1xx_it.o: ../Inc/defines.h
+sideboard\stm32f1xx_it.o: ../Inc/softwareserial.h

@@ -16,9 +16,9 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this p
+rogram.  If not, see <http://www.gnu.org/licenses/>.
 */
-
 /*
 tim1 master, enable -> trgo
 tim8, gated slave mode, trgo by tim1 trgo. overflow -> trgo
@@ -34,7 +34,7 @@ BAT   PC2 CH12   L_RX PA3 CH03
 
 pb10 usart3 dma1 channel2/3
 */
-
+#pragma once
 #include "defines.h"
 #include "config.h"
 #include "comms.h"
